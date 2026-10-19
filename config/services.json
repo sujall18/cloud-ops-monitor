@@ -1,0 +1,6 @@
+{
+  "services": [
+    {"name": "demo-healthy", "url": "https://example.com"},
+    {"name": "demo-invalid", "url": "http://127.0.0.1:9/healthz"}
+  ]
+}
