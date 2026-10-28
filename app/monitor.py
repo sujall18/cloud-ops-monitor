@@ -7,9 +7,10 @@ from datetime import datetime, timezone
 from prometheus_client import Gauge, start_http_server
 
 URLS = [
-    "https://example.com",
+    "https://example.com", 
     "https://httpbin.org/status/503",
     "http://localhost:4566/",
+    "https://google.com"
 ]
 
 CHECK_INTERVAL = 30
@@ -58,7 +59,7 @@ def check_url(url):
 
 
 def main():
-    start_http_server(8000)
+    start_http_server(8000, addr="0.0.0.0")
     print("Metrics available at http://localhost:8000/metrics")
 
     while True:
