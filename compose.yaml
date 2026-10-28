@@ -12,3 +12,11 @@ services:
       - "3000:3000"
     depends_on:
       - prometheus
+
+  monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile.monitor
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

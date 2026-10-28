@@ -9,8 +9,8 @@ from prometheus_client import Gauge, start_http_server
 URLS = [
     "https://example.com", 
     "https://httpbin.org/status/503",
-    "http://localhost:4566/",
-    "https://google.com"
+
+    "https://google.com",
 ]
 
 CHECK_INTERVAL = 30
